@@ -2,9 +2,8 @@
 session_start();
 include 'connectDB.php'; 
 
-
 if (!isset($_SESSION['id'])) {
- 
+  
     header("Location: prijava.php");
     exit();
 }
