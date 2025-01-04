@@ -1,15 +1,14 @@
 <?php
 session_start();
-include 'connectDB.php'; // Povezivanje sa bazom podataka
+include 'connectDB.php'; 
 
-// Proveriti da li je korisnik logovan
+
 if (!isset($_SESSION['id'])) {
-    // Ako nije logovan, preusmeriti na prijava.php
+  
     header("Location: prijava.php");
     exit();
 }
 
-// Postavljanje sadržaja u UTF-8 formatu
 header('Content-Type: text/html; charset=utf-8');
 ?>
 <!DOCTYPE html>
